@@ -6,7 +6,6 @@ import torch.nn as nn
 from sklearn.preprocessing import MinMaxScaler
 from torch.utils.data import DataLoader, TensorDataset
 import traceback
-from logic.graphics import financial_charts
 
 # ==================== MODELO LSTM ====================
 class LSTMModel(nn.Module):
@@ -314,7 +313,6 @@ def main(page: ft.Page):
         if page.route == "/financial-charts":
             page.views.clear()
             page.update()
-            financial_charts(page)
             return
         # Vista del Dashboard Principal
         page.views.clear()
